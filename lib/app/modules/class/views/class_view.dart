@@ -11,9 +11,11 @@ class ClassView extends GetView<ClassController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xFFF8F8F8),
       appBar: AppBar(
         title: const Text('List Kelas Diikuti'),
         centerTitle: true,
+        backgroundColor: Color(0xFFFFFFFF),
       ),
       body: ListView.builder(
         padding: EdgeInsets.all(10),
@@ -25,7 +27,7 @@ class ClassView extends GetView<ClassController> {
             padding: EdgeInsets.all(15),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20),
-              color: Colors.grey[200],
+              color: Color(0xFFFFFFFF),
             ),
             child: Row(
               children: [

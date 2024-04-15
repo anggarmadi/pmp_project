@@ -1,4 +1,5 @@
 import 'package:bimbingan_akademik/app/controllers/page_index_controller.dart';
+import 'package:bimbingan_akademik/app/routes/app_pages.dart';
 import 'package:convex_bottom_bar/convex_bottom_bar.dart';
 import 'package:flutter/material.dart';
 
@@ -11,9 +12,11 @@ class HomeView extends GetView<HomeController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xFFF8F8F8),
       appBar: AppBar(
         // title: const Text('HomeView'),
         toolbarHeight: 8,
+        backgroundColor: Color(0xFFFFFFFF),
       ),
       body: Center(
         child: ListView(
@@ -25,7 +28,7 @@ class HomeView extends GetView<HomeController> {
                   backgroundColor: Colors.black26,
                   radius: 30,
                   backgroundImage:
-                      NetworkImage("https://ui-avatars.com/api/?name=upin"),
+                      NetworkImage("https://ui-avatars.com/api/?name=y"),
                 ),
                 SizedBox(width: 10),
                 Expanded(
@@ -103,9 +106,10 @@ class HomeView extends GetView<HomeController> {
                                 color: Colors.white,
                               )),
                           style: ElevatedButton.styleFrom(
-                              backgroundColor: Color(0xFF008043),
-                              shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(12))),
+                            backgroundColor: Color(0xFF008043),
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(12)),
+                          ),
                         )
                       ],
                     ),
@@ -177,7 +181,11 @@ class HomeView extends GetView<HomeController> {
                     fontSize: 18,
                   ),
                 ),
-                TextButton(onPressed: () {}, child: Text("Lihat Semua"))
+                TextButton(
+                    onPressed: () {
+                      pageC.changePage(1);
+                    },
+                    child: Text("Lihat Semua"))
               ],
             ),
             SizedBox(height: 10),
@@ -191,7 +199,7 @@ class HomeView extends GetView<HomeController> {
                   padding: EdgeInsets.all(10),
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
-                    color: Colors.grey[200],
+                    color: Color(0xFFFFFFFF),
                   ),
                   child: Row(
                     children: [
@@ -241,7 +249,11 @@ class HomeView extends GetView<HomeController> {
                     fontSize: 18,
                   ),
                 ),
-                TextButton(onPressed: () {}, child: Text("Lihat Semua"))
+                TextButton(
+                    onPressed: () {
+                      pageC.changePage(2);
+                    },
+                    child: Text("Lihat Semua"))
               ],
             ),
             SizedBox(height: 10),
@@ -255,7 +267,7 @@ class HomeView extends GetView<HomeController> {
                   padding: EdgeInsets.all(10),
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
-                    color: Colors.grey[200],
+                    color: Color(0xFFFFFFFF),
                   ),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
