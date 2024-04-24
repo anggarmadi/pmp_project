@@ -8,6 +8,9 @@ abstract class Routes {
   static const GUIDANCE = _Paths.GUIDANCE;
   static const GUIDANCE_DETAILS = _Paths.GUIDANCE_DETAILS;
   static const ADD_GUIDANCE = _Paths.ADD_GUIDANCE;
+  static const GUIDANCE_DETAIL = _Paths.GUIDANCE_DETAIL;
+  static const EDIT_GUIDANCE = _Paths.EDIT_GUIDANCE;
+  static const PDFVIEW = _Paths.PDFVIEW;
 }
 
 abstract class _Paths {
@@ -17,4 +20,7 @@ abstract class _Paths {
   static const GUIDANCE = '/guidance';
   static const GUIDANCE_DETAILS = '/guidance-details';
   static const ADD_GUIDANCE = '/add-guidance';
+  static const GUIDANCE_DETAIL = '/guidance-detail';
+  static const EDIT_GUIDANCE = '/edit-guidance';
+  static const PDFVIEW = '/pdfview';
 }

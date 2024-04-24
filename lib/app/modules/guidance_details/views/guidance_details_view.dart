@@ -1,3 +1,4 @@
+import 'package:bimbingan_akademik/app/routes/app_pages.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
@@ -55,7 +56,7 @@ class GuidanceDetailsView extends GetView<GuidanceDetailsController> {
                 ),
                 SizedBox(height: 16),
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () => Get.toNamed(Routes.EDIT_GUIDANCE),
                   child: Text(
                     "Ubah",
                     style: TextStyle(

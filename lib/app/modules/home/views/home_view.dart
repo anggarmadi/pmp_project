@@ -4,6 +4,7 @@ import 'package:convex_bottom_bar/convex_bottom_bar.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
+import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
 
 import '../controllers/home_controller.dart';
 
@@ -99,7 +100,7 @@ class HomeView extends GetView<HomeController> {
                           ),
                         ),
                         ElevatedButton.icon(
-                          onPressed: () {},
+                          onPressed: () => Get.toNamed(Routes.PDFVIEW),
                           icon: Icon(Icons.download, color: Colors.white),
                           label: Text("Cetak",
                               style: TextStyle(

@@ -4,6 +4,8 @@ import '../modules/add_guidance/bindings/add_guidance_binding.dart';
 import '../modules/add_guidance/views/add_guidance_view.dart';
 import '../modules/class/bindings/class_binding.dart';
 import '../modules/class/views/class_view.dart';
+import '../modules/edit_guidance/bindings/edit_guidance_binding.dart';
+import '../modules/edit_guidance/views/edit_guidance_view.dart';
 import '../modules/guidance/bindings/guidance_binding.dart';
 import '../modules/guidance/views/guidance_view.dart';
 import '../modules/guidance_details/bindings/guidance_details_binding.dart';
@@ -12,6 +14,8 @@ import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
 import '../modules/home/views/home_view.dart';
+import '../modules/pdfview/bindings/pdfview_binding.dart';
+import '../modules/pdfview/views/pdfview_view.dart';
 
 part 'app_routes.dart';
 
@@ -48,6 +52,16 @@ class AppPages {
       name: _Paths.ADD_GUIDANCE,
       page: () => const AddGuidanceView(),
       binding: AddGuidanceBinding(),
+    ),
+    GetPage(
+      name: _Paths.EDIT_GUIDANCE,
+      page: () => const EditGuidanceView(),
+      binding: EditGuidanceBinding(),
+    ),
+    GetPage(
+      name: _Paths.PDFVIEW,
+      page: () => const PdfviewView(),
+      binding: PdfviewBinding(),
     ),
   ];
 }
