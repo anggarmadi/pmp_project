@@ -13,17 +13,16 @@ class HomeView extends GetView<HomeController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFFF8F8F8),
+      backgroundColor: const Color(0xFFF8F8F8),
       appBar: AppBar(
-        // title: const Text('HomeView'),
         toolbarHeight: 8,
-        backgroundColor: Color(0xFFFFFFFF),
+        backgroundColor: const Color(0xFFFFFFFF),
       ),
       body: Center(
         child: ListView(
-          padding: EdgeInsets.all(12),
+          padding: const EdgeInsets.all(12),
           children: [
-            Row(
+            const Row(
               children: [
                 CircleAvatar(
                   backgroundColor: Colors.black26,
@@ -63,19 +62,19 @@ class HomeView extends GetView<HomeController> {
                 ),
               ],
             ),
-            SizedBox(height: 24),
+            const SizedBox(height: 24),
             Container(
-              padding: EdgeInsets.all(20),
+              padding: const EdgeInsets.all(20),
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(10.0),
-                gradient: LinearGradient(
+                gradient: const LinearGradient(
                     colors: [
-                      const Color(0xFF00A254),
+                      Color(0xFF00A254),
                       Color.fromARGB(255, 6, 105, 59),
                     ],
-                    begin: const FractionalOffset(0.0, 0.0),
-                    end: const FractionalOffset(1.0, 0.0),
+                    begin: FractionalOffset(0.0, 0.0),
+                    end: FractionalOffset(1.0, 0.0),
                     stops: [0.1, 1.0],
                     tileMode:
                         TileMode.clamp), // Change this to adjust corner radius
@@ -84,15 +83,15 @@ class HomeView extends GetView<HomeController> {
               child: Column(
                 children: [
                   Container(
-                    padding: EdgeInsets.all(10),
+                    padding: const EdgeInsets.all(10),
                     decoration: BoxDecoration(
-                      color: Color(0xFF4DAE7F),
+                      color: const Color(0xFF4DAE7F),
                       borderRadius: BorderRadius.circular(10.0),
                     ),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text(
+                        const Text(
                           "Kartu Ujian",
                           style: TextStyle(
                             color: Colors.white,
@@ -100,14 +99,14 @@ class HomeView extends GetView<HomeController> {
                           ),
                         ),
                         ElevatedButton.icon(
-                          onPressed: () => Get.toNamed(Routes.PDFVIEW),
-                          icon: Icon(Icons.download, color: Colors.white),
-                          label: Text("Cetak",
+                          onPressed: () => Get.toNamed(Routes.EXAM_CARD),
+                          icon: const Icon(Icons.download, color: Colors.white),
+                          label: const Text("Cetak",
                               style: TextStyle(
                                 color: Colors.white,
                               )),
                           style: ElevatedButton.styleFrom(
-                            backgroundColor: Color(0xFF008043),
+                            backgroundColor: const Color(0xFF008043),
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(12)),
                           ),
@@ -115,11 +114,11 @@ class HomeView extends GetView<HomeController> {
                       ],
                     ),
                   ),
-                  SizedBox(height: 10),
+                  const SizedBox(height: 10),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
-                      Row(
+                      const Row(
                         children: [
                           Icon(Icons.book, size: 40, color: Colors.white),
                           SizedBox(width: 8),
@@ -145,7 +144,7 @@ class HomeView extends GetView<HomeController> {
                         height: 40,
                         color: Colors.white,
                       ),
-                      Row(
+                      const Row(
                         children: [
                           Icon(Icons.note_add_rounded,
                               size: 40, color: Colors.white),
@@ -172,11 +171,11 @@ class HomeView extends GetView<HomeController> {
                 ],
               ),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(
+                const Text(
                   "Daftar Kelas",
                   style: TextStyle(
                     fontSize: 18,
@@ -189,10 +188,10 @@ class HomeView extends GetView<HomeController> {
                     child: Text("Lihat Semua"))
               ],
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             ListView.builder(
               shrinkWrap: true,
-              physics: NeverScrollableScrollPhysics(),
+              physics: const NeverScrollableScrollPhysics(),
               itemCount: 3,
               itemBuilder: (context, index) {
                 return Container(
@@ -204,18 +203,18 @@ class HomeView extends GetView<HomeController> {
                   ),
                   child: Row(
                     children: [
-                      CircleAvatar(
+                      const CircleAvatar(
                         backgroundColor: Colors.black26,
                         radius: 30,
                         backgroundImage: NetworkImage(
                             "https://ui-avatars.com/api/?name=Mata-Kuliah"),
                       ),
-                      SizedBox(width: 10),
+                      const SizedBox(width: 10),
                       Expanded(
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text(
+                            const Text(
                               "Pemograman Multi Platfrom",
                               style: TextStyle(
                                 color: Colors.black,
@@ -229,7 +228,7 @@ class HomeView extends GetView<HomeController> {
                                 borderRadius: BorderRadius.circular(10),
                                 color: Color(0xFFCCE6D9),
                               ),
-                              child: Text("3 SKS",
+                              child: const Text("3 SKS",
                                   style: TextStyle(color: Color(0xFF008043))),
                             )
                           ],
@@ -240,11 +239,11 @@ class HomeView extends GetView<HomeController> {
                 );
               },
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(
+                const Text(
                   "Riwayat Bimbingan Akademik",
                   style: TextStyle(
                     fontSize: 18,
@@ -254,26 +253,26 @@ class HomeView extends GetView<HomeController> {
                     onPressed: () {
                       pageC.changePage(2);
                     },
-                    child: Text("Lihat Semua"))
+                    child: const Text("Lihat Semua"))
               ],
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             ListView.builder(
               shrinkWrap: true,
-              physics: NeverScrollableScrollPhysics(),
+              physics: const NeverScrollableScrollPhysics(),
               itemCount: 3,
               itemBuilder: (context, index) {
                 return Container(
-                  margin: EdgeInsets.only(bottom: 10),
-                  padding: EdgeInsets.all(10),
+                  margin: const EdgeInsets.only(bottom: 10),
+                  padding: const EdgeInsets.all(10),
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
-                    color: Color(0xFFFFFFFF),
+                    color: const Color(0xFFFFFFFF),
                   ),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(
+                      const Text(
                         "Permohonan KP",
                         style: TextStyle(
                           color: Colors.black,
@@ -281,7 +280,7 @@ class HomeView extends GetView<HomeController> {
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                      Text(
+                      const Text(
                         "22 April 2024",
                         style: TextStyle(
                           color: Colors.black,
@@ -289,19 +288,19 @@ class HomeView extends GetView<HomeController> {
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                      Text(
+                      const Text(
                         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco ",
                         style: TextStyle(
                           overflow: TextOverflow.ellipsis,
                         ),
                       ),
                       Container(
-                        padding: EdgeInsets.all(4),
+                        padding: const EdgeInsets.all(4),
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
-                          color: Color(0xFFFFE2CC),
+                          color: const Color(0xFFFFE2CC),
                         ),
-                        child: Text(
+                        child: const Text(
                           "Belum diverifikasi",
                           style: TextStyle(color: Color(0xFFFF6F00)),
                         ),
@@ -322,7 +321,7 @@ class HomeView extends GetView<HomeController> {
         backgroundColor: Colors.white,
         activeColor: Color(0xff008043),
         color: Colors.grey[400],
-        items: [
+        items: const [
           TabItem(icon: Icons.home, title: 'Beranda'),
           TabItem(icon: Icons.class_, title: 'Kelas'),
           TabItem(icon: Icons.note_add_rounded, title: 'Bimbingan'),

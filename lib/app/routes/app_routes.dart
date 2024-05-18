@@ -11,6 +11,7 @@ abstract class Routes {
   static const GUIDANCE_DETAIL = _Paths.GUIDANCE_DETAIL;
   static const EDIT_GUIDANCE = _Paths.EDIT_GUIDANCE;
   static const PDFVIEW = _Paths.PDFVIEW;
+  static const EXAM_CARD = _Paths.EXAM_CARD;
 }
 
 abstract class _Paths {
@@ -23,4 +24,5 @@ abstract class _Paths {
   static const GUIDANCE_DETAIL = '/guidance-detail';
   static const EDIT_GUIDANCE = '/edit-guidance';
   static const PDFVIEW = '/pdfview';
+  static const EXAM_CARD = '/exam-card';
 }

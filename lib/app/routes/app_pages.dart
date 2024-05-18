@@ -6,6 +6,8 @@ import '../modules/class/bindings/class_binding.dart';
 import '../modules/class/views/class_view.dart';
 import '../modules/edit_guidance/bindings/edit_guidance_binding.dart';
 import '../modules/edit_guidance/views/edit_guidance_view.dart';
+import '../modules/exam_card/bindings/exam_card_binding.dart';
+import '../modules/exam_card/views/exam_card_view.dart';
 import '../modules/guidance/bindings/guidance_binding.dart';
 import '../modules/guidance/views/guidance_view.dart';
 import '../modules/guidance_details/bindings/guidance_details_binding.dart';
@@ -62,6 +64,11 @@ class AppPages {
       name: _Paths.PDFVIEW,
       page: () => const PdfviewView(),
       binding: PdfviewBinding(),
+    ),
+    GetPage(
+      name: _Paths.EXAM_CARD,
+      page: () => const ExamCardView(),
+      binding: ExamCardBinding(),
     ),
   ];
 }
